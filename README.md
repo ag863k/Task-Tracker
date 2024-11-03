@@ -29,7 +29,7 @@ This project is a personal endeavor aimed at improving my skills in web developm
 <h2>Future Enhancements</h2>
 Implement local storage to save tasks between sessions.
 Add user authentication for personalized task management.
-Introduce categories or tags for tasks to improve organization.
+Introduce categories or tags for tasks to improve organization
 
-
+<br><br>
 Feel free to modify any sections to better fit your style or add any additional features you might want to highlight. This description should give potential viewers a clear understanding of what the project is about and how they can engage with it!
