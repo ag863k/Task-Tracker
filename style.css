@@ -1,0 +1,100 @@
+/* General styling */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* App container styling */
+#app {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Header styling */
+#app h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Input and button styling */
+input[type="text"], button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+input[type="text"] {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Task list styling */
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: rgba(240, 240, 240, 0.9);
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: transform 0.2s;
+}
+
+.task:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task button {
+    background-color: #da3737;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.task button:hover {
+    background-color: #e64a19;
+}
+
+/* Styling for completed tasks */
+.complete {
+    text-decoration: line-through;
+    color: #999;
+    font-style: italic;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <h2>Task Tracker</h2>
+        <input type="text" id="taskInput" placeholder="Enter a task" />
+        <button onclick="addTask()">Add Task</button>
+        <ul id="taskList"></ul>
+    </div>
+    
+    <script>
+        const taskList = document.getElementById("taskList");
+
+        function addTask() {
+            const taskText = document.getElementById("taskInput").value;
+            if (taskText) {
+                const li = document.createElement("li");
+                li.className = "task";
+                li.innerHTML = `
+                    <span>${taskText}</span>
+                    <button onclick="markComplete(this)">Complete</button>
+                    <button onclick="deleteTask(this)">Delete</button>
+                `;
+                taskList.appendChild(li);
+                document.getElementById("taskInput").value = "";
+            }
+        }
+
+        function markComplete(button) {
+            const task = button.parentElement.querySelector("span");
+            task.classList.toggle("complete");
+        }
+
+        function deleteTask(button) {
+            const task = button.parentElement;
+            task.remove();
+        }
+    </script>
+</body>
+</html>
