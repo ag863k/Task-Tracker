@@ -14,11 +14,6 @@ Frontend: HTML, CSS, JavaScript
 Styling: Custom CSS for a modern UI/UX
 Version Control: Git for source code management
 
-Navigate to the project directory:
-cd task-tracker
-
-Open index.html in your web browser to start using the app.
-
 <h2>Contribution</h2>
 This project is a personal endeavor aimed at improving my skills in web development. I welcome feedback and contributions from others to further enhance this application. Feel free to fork the repository and submit a pull request with your suggestions!
 
