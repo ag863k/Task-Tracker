@@ -14,10 +14,6 @@ Frontend: HTML, CSS, JavaScript
 Styling: Custom CSS for a modern UI/UX
 Version Control: Git for source code management
 
-<h2>Installation</h2>
-Clone the repository:
-git clone https://github.com/yourusername/task-tracker.git
-
 Navigate to the project directory:
 cd task-tracker
 
