@@ -121,9 +121,10 @@ button:hover {
 
 .task .button-group {
     display: flex;
-    gap: 5px;
+    gap: 8px;
     flex-shrink: 0;
-    min-width: 140px;
+    min-width: 130px;
+    align-items: center;
 }
 
 .task button {
@@ -137,7 +138,8 @@ button:hover {
     transition: background 0.2s, transform 0.2s;
     white-space: nowrap;
     flex: 1;
-    min-width: 65px;
+    min-width: 60px;
+    text-align: center;
 }
 
 .task button:first-of-type {
