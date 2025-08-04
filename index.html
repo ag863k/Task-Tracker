@@ -4,13 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Tracker</title>
+    <meta name="description" content="A lovely, professional task tracker app.">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Fade-in animation for app container */
+        #app {
+            opacity: 0;
+            animation: fadeInApp 1.2s ease forwards;
+        }
+        @keyframes fadeInApp {
+            to { opacity: 1; }
+        }
+    </style>
 </head>
 <body>
-    <div id="app">
+    <div id="app" role="main" aria-label="Task Tracker">
         <h2>Task Tracker</h2>
-        <input type="text" id="taskInput" placeholder="Enter a task" />
-        <button onclick="addTask()">Add Task</button>
+        <input type="text" id="taskInput" placeholder="Enter a task" aria-label="Task input" autocomplete="off" />
+        <button onclick="addTask()" aria-label="Add Task">Add Task</button>
         <ul id="taskList"></ul>
     </div>
     
@@ -24,8 +35,10 @@
                 li.className = "task";
                 li.innerHTML = `
                     <span>${taskText}</span>
-                    <button onclick="markComplete(this)">Complete</button>
-                    <button onclick="deleteTask(this)">Delete</button>
+                    <div class="button-group">
+                        <button onclick="markComplete(this)">Complete</button>
+                        <button onclick="deleteTask(this)">Delete</button>
+                    </div>
                 `;
                 taskList.appendChild(li);
                 document.getElementById("taskInput").value = "";
@@ -33,12 +46,12 @@
         }
 
         function markComplete(button) {
-            const task = button.parentElement.querySelector("span");
+            const task = button.parentElement.parentElement.querySelector("span");
             task.classList.toggle("complete");
         }
 
         function deleteTask(button) {
-            const task = button.parentElement;
+            const task = button.parentElement.parentElement;
             task.remove();
         }
     </script>
